@@ -159,7 +159,7 @@ if($display_services_section && ($services_section_description ||$services_secti
 											<ul>
 												<?php while(have_rows('content')):the_row(); ?>
 													<li><?=get_sub_field('title')?></li>
-												<?php endwhile; ?>
+												<?php endwhile; wp_reset_postdata(); ?>
 											</ul>
 										</div>
 									</div>
@@ -169,7 +169,7 @@ if($display_services_section && ($services_section_description ||$services_secti
 								</div>
 							</article>
 						<?php } ?>
-                    <?php endforeach; wp_reset_postdata(  ); ?>
+                    <?php endforeach; wp_reset_postdata(); ?>
                 </div>
             <?php } ?> 
         </div>
@@ -200,7 +200,7 @@ if($display_testimonials_section){
 								<p><?=get_field('title')?></p>
 							</div>
 						</article>
-						<?php endwhile; wp_reset_postdata(  ); ?>
+						<?php endwhile; wp_reset_postdata(); ?>
 					</div>
 				</div>
             </div>
@@ -255,7 +255,7 @@ if($display_blog_section){
                             </div>
                         </div>
                     </article>
-                <?php endwhile; wp_reset_postdata(  ); ?>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
 			
 			<div class="read_more ">

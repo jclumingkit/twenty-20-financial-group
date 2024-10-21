@@ -1,3 +1,9 @@
+<?php
+while ( have_posts() ) : the_post();
+    the_content(); // This is required for Elementor to work.
+endwhile;
+?>
+
 <?php get_header(); ?>
 
 <section class="banner__wrap single_blog">
